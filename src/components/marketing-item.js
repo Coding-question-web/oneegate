@@ -5,7 +5,7 @@ export default function marketingItem({ item }) {
     return (
         <div style={styles.imageContainer}>
             <Image src={item.image} alt='item1' sx={styles.image} />
-            <div style={styles.desc}>
+            <div style={styles.desc} className='contentBox'>
             {item.upDesc && (
                 <p style={styles.desc.p1}>{item.upDesc}</p>
             )}
@@ -14,6 +14,16 @@ export default function marketingItem({ item }) {
           </Heading>
             <p style={styles.desc.p2}>{item.lowDesc}</p>
             </div>
+            <style jsx>
+                {`
+                    @media screen and (max-width: 720px) {
+                        .contentBox {
+                            width: 95% !important;
+                            left: 5vw !important;
+                        }
+                    }
+                `}
+            </style>
         </div>
     )
 }

@@ -84,8 +84,8 @@ export default function MarketingCarousel() {
   return (
   // <div sx={styles.banner}>
     <Carousel {...sliderParams}>
-      {details.map(item => (
-        <MarketingItem item={item} />
+      {details.map((item, index) => (
+        <MarketingItem item={item} key={index} />
       ))}
     </Carousel>
     // </div>

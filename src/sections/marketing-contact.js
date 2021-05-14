@@ -14,14 +14,21 @@ export default function MarketingContact() {
                 </Box>
                 <Label htmlFor='name'>Name</Label>
                 <Input name="name" mb={3} sx={{backgroundColor: '#fff', color: '#acacac'}} onFocus={() => setShow(true)} />
-                    <span style={show ? {display: 'block', transition: '1s ease-in-out'} : {display: 'none', transition: '5s ease-in-out'}}>
-                    <Label htmlFor='email'>Email</Label>
-                <Input name="email" mb={3} sx={{backgroundColor: '#fff', color: '#acacac'}}  />
-                <Label htmlFor='subject'>Subject</Label>
-                <Input name="subject" mb={3} sx={{backgroundColor: '#fff', color: '#acacac'}} />
-                <Label htmlFor="message">Message</Label>
-                <Textarea name="message" rows={6} mb={3} sx={{backgroundColor: '#fff', color: '#acacac'}}  />
+                    <span style={show ? {display: 'block'} : {display: 'none'}} className='animationBox'>
+                        <Label htmlFor='email'>Email</Label>
+                        <Input name="email" mb={3} sx={{backgroundColor: '#fff', color: '#acacac'}}  />
+                        <Label htmlFor='subject'>Subject</Label>
+                        <Input name="subject" mb={3} sx={{backgroundColor: '#fff', color: '#acacac'}} />
+                        <Label htmlFor="message">Message</Label>
+                        <Textarea name="message" rows={6} mb={3} sx={{backgroundColor: '#fff', color: '#acacac'}}  />
                     </span>
+                    <style jsx>
+                        {`
+                        .animationBox {
+                            transition: display 0.5s ease;
+                        }
+                        `}
+                    </style>
                 <Box sx={{textAlign: 'center'}}>
                     <Button variant='primary'>
                         Submit
