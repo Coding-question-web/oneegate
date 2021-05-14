@@ -16,11 +16,11 @@ export default function MarketingContact() {
                 <Input name="name" mb={3} sx={{backgroundColor: '#fff', color: '#acacac'}} onFocus={() => setShow(true)} onBlur={() => setShow(false)} />
                     <span style={show ? {display: 'block', transition: '1s ease-in-out'} : {display: 'none', transition: '5s ease-in-out'}}>
                     <Label htmlFor='email'>Email</Label>
-                <Input name="email" mb={3} sx={{backgroundColor: '#fff', color: '#acacac'}} />
+                <Input name="email" mb={3} sx={{backgroundColor: '#fff', color: '#acacac'}} onFocus={() => setShow(true)} />
                 <Label htmlFor='subject'>Subject</Label>
-                <Input name="subject" mb={3} sx={{backgroundColor: '#fff', color: '#acacac'}}/>
+                <Input name="subject" mb={3} sx={{backgroundColor: '#fff', color: '#acacac'}} onFocus={() => setShow(true)}/>
                 <Label htmlFor="message">Message</Label>
-                <Textarea name="message" rows={6} mb={3} sx={{backgroundColor: '#fff', color: '#acacac'}} />
+                <Textarea name="message" rows={6} mb={3} sx={{backgroundColor: '#fff', color: '#acacac'}} onFocus={() => setShow(true)} />
                     </span>
                 <Box sx={{textAlign: 'center'}}>
                     <Button variant='primary'>
